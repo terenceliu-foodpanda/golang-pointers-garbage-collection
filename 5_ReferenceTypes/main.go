@@ -9,10 +9,10 @@ func main() {
 	fmt.Println("\n######################")
 	fmt.Println("SLICES")
 	fmt.Println("######################")
-	var fullSlice []int = []int{1, 2, 3, 4, 5}
+	var fullSlice = []int{1, 2, 3, 4, 5}
 	var partialSlice = fullSlice[3:]
 
-	fmt.Printf("Init:\n")
+	fmt.Printf("\nInit:\n")
 	fmt.Println("-------")
 	fmt.Printf("ArrInt: %+v \nSliceInt: %+v\n\n", fullSlice, partialSlice)
 
@@ -26,9 +26,9 @@ func main() {
 	fmt.Println("MAP")
 	fmt.Println("######################")
 	var emptyMap = make(map[string]interface{})
-	fmt.Println("Init:")
+	fmt.Println("\nInit:")
 	fmt.Println("-------")
-	fmt.Printf("emptyMap: %+v\n", emptyMap)
+	fmt.Printf("emptyMap: %+v\n\n", emptyMap)
 
 	MapFunc(emptyMap)
 	fmt.Println("After:")
@@ -36,7 +36,7 @@ func main() {
 	fmt.Printf("emptyMap: %+v\n", emptyMap)
 }
 
-func MapFunc(val map[string]interface{}) {
+func MapFunc(val map[string]interface{}) { //no pointer was used here and the map still updated!
 	val["this is a new value"] = 100
 }
 

@@ -31,7 +31,7 @@ func (s *StructVal) AddPtr() {
 	fmt.Println("######################")
 	fmt.Printf("Memory Location %p\n", s)
 	fmt.Printf("Value Before: %+v\n", s)
-	s.IntVal++
+	s.IntVal++ // Need to use a pointer here inorder to update!
 	//(*s).IntVal++ //SAME
 	fmt.Printf("Value After: %+v\n\n", s)
 }
@@ -63,6 +63,7 @@ func main() {
 	fmt.Printf("FINAL\n")
 	fmt.Println("######################")
 	fmt.Printf("Value: %+v\n", init)
+
 }
 
 //In the last example, we will work on Struct Function .

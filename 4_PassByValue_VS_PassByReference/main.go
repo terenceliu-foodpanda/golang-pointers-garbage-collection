@@ -7,7 +7,7 @@ func main() {
 	a, b := 0, 0
 
 	// Initialize Value
-	fmt.Printf("\n[ 1 - ORIGINAL] ######################################### \n")
+	fmt.Printf("\n[ 1 - ORIGINAL ] ######################################### \n")
 	fmt.Printf("[Memory Location] a: %p, b: %p\n", &a, &b)
 	fmt.Printf("[Value] a: %d, b: %d\n", a, b) // 0 0
 	fmt.Printf("######################################################### \n")
