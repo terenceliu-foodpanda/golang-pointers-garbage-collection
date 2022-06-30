@@ -65,13 +65,3 @@ func main() {
 	fmt.Printf("Value: %+v\n", init)
 
 }
-
-//In the last example, we will work on Struct Function .
-//The difference is on the struct itself instead of the variable inside the struct.
-//When we make a struct function, we declare the struct as the prefix of the function,
-//for example func (s struct) FuncName()or func (s *struct) FuncName() .
-//The difference is, the struct that uses in the function,
-//if we use pointer one, it will give us the original struct,
-//so anything that happens to the value of the struct will have an effect on the original one,
-//and the function without a pointer will make a copy of the struct and pass it into the function.
-//So, if anything happens to the value of the struct, it will not affect the original struct.

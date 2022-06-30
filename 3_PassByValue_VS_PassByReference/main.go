@@ -1,4 +1,3 @@
-//https://david-yappeter.medium.com/golang-pass-by-value-vs-pass-by-reference-e48aac8b2716
 package main
 
 import "fmt"
@@ -12,7 +11,7 @@ func main() {
 	fmt.Printf("[Value] a: %d, b: %d\n", a, b) // 0 0
 	fmt.Printf("######################################################### \n")
 
-	// Passing By Value a(int)
+	// Passing By Value a(int) //This is the default in Go
 	Add(a) // Golang will copy value of 'a' and insert it into argument
 
 	// Passing By Reference b(int), &b(*int) => with '&' we can get the memory location of 'b'
@@ -46,15 +45,3 @@ func AddPtr(x *int) {
 	fmt.Printf("After AddPtr, Memory Location: %p, Value: %d\n", x, *x)
 	fmt.Printf("######################################################### \n")
 }
-
-//In the first example, we will work on the basic data types. As we can see we have 2 functions:
-//
-//Add(x int) which take an integer as the parameter.
-//AddPtr(x *int) which takes a pointer integer as the parameter.
-//The memory location of a and b cannot be predicted but we can track them down by printing their memory location.
-//
-//In the Add method, the memory location of the value is not the same as a from the main() because Go copy the value of a and initialize a new memory location, so if we change the value x++ , a will still be 0 . The final output of a is 0 because it is Pass by value.
-//
-//In the AddPtr method, the memory location of the value is the same as b so we know that it shares the same ‘container’, everything that we do to x inside AddPtr will affect b value, we try to add the value of x in *x++ . The final output of b is 1 which changed because of Pass by reference.
-//
-//Other basic data types like int, int8, int16, int32, int64, uint, uint8, uint16, uint32, uint64, uintptr, float32, float64, string, bool, byte, rune, Array, Structs . Array and Struct have the same property with basic data types.
